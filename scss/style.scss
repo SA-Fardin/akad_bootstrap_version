@@ -1,0 +1,98 @@
+html {
+    font-size: 14px;
+}
+$blue : #007bff !default;
+$green: #7beec7;
+$gray-900: #60606e;
+$font-size-base: 1rem;
+$h2-font-size: $font-size-base * 2.143;
+$component-active-bg: $green;
+$link-color: $gray-900;
+$border-radius: 0;
+$navbar-light-toggler-border-color: transparent;
+$spacer: 1rem;
+$spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge( ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 3), 15: 15px, 20: 20px, 25: 25px, 50: 50px, 100: 100px, 125: 125px, 150: 150px, 175: 175px, 250: 250px, ), $spacers);
+@import "../bootstrap-4.1.3/scss/bootstrap.scss";
+button:focus {
+    outline: none;
+}
+.header {
+    background: url(../homepage-assets/weare-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.undertitle {
+    text-align: center;
+    text-transform: uppercase; // customization here
+}
+.lists-style-none {
+    list-style: none;
+    line-height: 20px;
+}
+.border-ten-px {
+    border: 10px solid #dee2e6;
+    border-radius: 1px;
+}
+.div-foricons {
+    width: 40px;
+    height: 40px;
+}
+.footer-links {
+    &:hover {
+        color: #7beec7;
+        text-decoration: none;
+    }
+}
+.navbar-light .navbar-toggler-icon {
+    background: url("../homepage-assets/lines.png");
+    background-repeat: no-repeat;
+    background-size: content;
+    background-position: center;
+}
+.portfolio-text-bg {
+     position: relative;
+    &::before {
+        content: "";
+        width: 70px;
+        height: 25px;
+        border-radius: 1px;
+        top: 17px;
+        margin-left: -5px;  
+        background:#7beec7;
+        z-index: -1;
+        position: absolute;
+    }
+}
+.choose-us-text-bg {
+    position: relative;
+    &::before {
+        content: "";
+        width: 70px;
+        height: 25px;
+        border-radius: 1px;
+        top: 20px;
+        margin-left: -5px;  
+        background:#7beec7;
+        z-index: -1;
+        position: absolute;
+    }
+}
+
+.history-text-bg {
+    z-index: 1;
+    position: relative;
+    &::before {
+        content: "";
+        width: 70px;
+        height: 25px;
+        border-radius: 1px;
+        top: 15px;
+        margin-left: -5px;  
+        background:#7beec7;
+        z-index: -1;
+        position: absolute;
+    }
+}
