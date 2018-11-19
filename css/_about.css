@@ -1,0 +1,40 @@
+button:focus {
+  outline: none; }
+
+.header {
+  background: url(../images/pages-header-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.navbar-light .navbar-toggler-icon {
+  background: url("../images/lines.png");
+  background-repeat: no-repeat;
+  background-size: content;
+  background-position: center; }
+
+.carousel-indicators .active {
+  background-color: #7beec7; }
+
+.carousel-indicators li {
+  background-color: #60606e; }
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  display: none; }
+
+.divfor-dreamteam-imgs {
+  width: 160px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.footer-links:hover {
+  color: #7beec7;
+  text-decoration: none; }

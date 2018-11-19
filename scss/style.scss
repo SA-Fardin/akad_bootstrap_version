@@ -1,9 +1,12 @@
 html {
     font-size: 14px;
 }
-$blue : #007bff !default;
+$blue: #007bff !default;
 $green: #7beec7;
 $gray-900: #60606e;
+$link-hover-color: $green;
+$link-hover-decoration: none;
+$carousel-indicator-active-bg: $green;
 $font-size-base: 1rem;
 $h2-font-size: $font-size-base * 2.143;
 $component-active-bg: $green;
@@ -15,84 +18,101 @@ $spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge( ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 3), 15: 15px, 20: 20px, 25: 25px, 50: 50px, 100: 100px, 125: 125px, 150: 150px, 175: 175px, 250: 250px, ), $spacers);
 @import "../bootstrap-4.1.3/scss/bootstrap.scss";
+@import '_about.scss';
+@import '_contact.scss';
 button:focus {
     outline: none;
 }
 .header {
-    background: url(../homepage-assets/weare-bg.png);
+    background: url(../images/weare-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-.undertitle {
+.underline {
     text-align: center;
-    text-transform: uppercase; // customization here
-}
-.lists-style-none {
-    list-style: none;
-    line-height: 20px;
-}
-.border-ten-px {
-    border: 10px solid #dee2e6;
-    border-radius: 1px;
-}
-.div-foricons {
-    width: 40px;
-    height: 40px;
-}
-.footer-links {
-    &:hover {
-        color: #7beec7;
-        text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 21px;
+        top: 20px;
+        line-height: 1;
+        background: $green;
+        z-index: -1;
     }
+}
+.custom-border {
+    border: 10px solid $gray-900;
 }
 .navbar-light .navbar-toggler-icon {
-    background: url("../homepage-assets/lines.png");
+    background: url("../images/lines.png");
     background-repeat: no-repeat;
-    background-size: content;
+    background-size: contain;
     background-position: center;
 }
-.portfolio-text-bg {
-     position: relative;
-    &::before {
-        content: "";
-        width: 70px;
-        height: 25px;
-        border-radius: 1px;
-        top: 17px;
-        margin-left: -5px;  
-        background:#7beec7;
-        z-index: -1;
-        position: absolute;
-    }
+.footer-icons {
+    background-image: url(../images/sprite.png);
+    background-size: 175px 16px;
+    width: 20px;
+    height: 16px;
+    display: inline-block;
 }
-.choose-us-text-bg {
-    position: relative;
-    &::before {
-        content: "";
-        width: 70px;
-        height: 25px;
-        border-radius: 1px;
-        top: 20px;
-        margin-left: -5px;  
-        background:#7beec7;
-        z-index: -1;
-        position: absolute;
-    }
+.icon-facebook {
+   background-position: 7;
+   position: relative;
+   &:before {
+    content: "";
+    width: 8.5px;
+    height: 16px;
+    position: absolute;
+    background: #ffffff;
+    top: 0px;
+    left: -1px;
+   }
+   &:hover {
+    opacity: .5;
+   }  
 }
-
-.history-text-bg {
-    z-index: 1;
-    position: relative;
-    &::before {
-        content: "";
-        width: 70px;
-        height: 25px;
-        border-radius: 1px;
-        top: 15px;
-        margin-left: -5px;  
-        background:#7beec7;
-        z-index: -1;
-        position: absolute;
-    }
+.icon-twitter {
+   background-position: 152px;
+   &:hover {
+    opacity: .5;
+   } 
+}
+.icon-youtube {
+   background-position: 116px;
+   &:hover {
+    opacity: .5;
+   } 
+}
+.icon-linkedin {
+   background-position: 83px; 
+   &:hover {
+    opacity: .5;
+   }
+}
+.icon-pinterest {
+   background-position: 50px;
+   &:hover {
+    opacity: .5;
+   } 
+}
+.icon-instagram {
+   background-position: 16px;
+   position: relative;
+   &:after {
+    content: "";
+    width: 5px;
+    height: 16px;
+    position: absolute;
+    background: #ffffff;
+    top: 0px;
+    right: -1px;
+   } 
+   &:hover {
+    opacity: .5;
+   }
 }

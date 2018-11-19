@@ -9004,19 +9004,26 @@ button:focus {
   background-size: content;
   background-position: center; }
 
-.carousel-indicators .active {
-  background-color: #7beec7; }
+.footer-links:hover {
+  color: #7beec7;
+  text-decoration: none; }
 
-.carousel-indicators li {
-  background-color: #60606e; }
+.li-icon {
+  list-style: none; }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  display: none; }
+.li-icon:before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  background-image: url("../images/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
 
-.divfor-dreamteam-imgs {
-  width: 160px;
-  height: 100px;
+.divfor-firsttitle-icons {
+  width: 70px;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9027,6 +9034,26 @@ button:focus {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.footer-links:hover {
-  color: #7beec7;
-  text-decoration: none; }
+.hover-borderfor-pricing {
+  border-top: 5px solid #7beec7;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+  position: relative; }
+  .hover-borderfor-pricing:hover {
+    -webkit-transform: translateY(-1%);
+    -ms-transform: translateY(-1%);
+    transform: translateY(-1%);
+    -webkit-box-shadow: -1px 0px 25px 0px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: -1px 0px 25px 0px rgba(0, 0, 0, 0.21);
+    box-shadow: -1px 0px 25px 0px rgba(0, 0, 0, 0.21); }
+  .hover-borderfor-pricing::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    border-color: transparent #7beec7 transparent transparent;
+    position: absolute;
+    top: -1px;
+    right: 0; }

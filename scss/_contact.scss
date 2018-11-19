@@ -1,0 +1,21 @@
+
+.navbar-light .navbar-toggler-icon {
+    background: url("../images/lines.png");
+    background-repeat: no-repeat;
+    background-size: content;
+    background-position: center;
+}
+.inputtext-color {
+    &::placeholder {
+        color: #cccccc;
+    }
+}
+.input-height {
+    height: 200px;
+}
+.footer-links {
+    &:hover {
+        color: #7beec7;
+        text-decoration: none;
+    }
+}
